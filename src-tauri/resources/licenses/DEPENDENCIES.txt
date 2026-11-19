@@ -1,0 +1,30 @@
+Photo Viewer Advanced 3.0.0 — third-party components
+
+Image decoding is provided by unmodified ImageMagick 7.1.2-35 Q16-HDRI x64
+and its statically linked image libraries. ImageMagick-and-delegates-NOTICE.txt
+contains their full licenses, attributions, versions and exact source commits.
+The companion Photo Viewer Advanced source archive includes the corresponding
+source archives and Windows build/configuration sources in third-party-sources.
+The installed application works independently of that source archive.
+
+The separate image decoder includes LibRaw, libheif/libde265, libwebp, libjxl,
+OpenJPEG, OpenEXR, libpng, libjpeg-turbo, libtiff, librsvg, Little CMS and other
+libraries listed in the complete NOTICE. Their separate license terms apply.
+The source bundle documents how to rebuild and replace the decoder. The app
+does not restrict personal replacement or debugging of that component.
+
+RUST-DEPENDENCIES.txt lists the Windows x64 Rust dependency resolution,
+license expressions and full license texts. NPM-DEPENDENCIES.txt lists the
+frontend and build dependencies and their full license texts.
+
+vcomp140.dll is the unmodified Microsoft Visual C++ x64 OpenMP runtime
+14.44.35211.0, included alongside the decoder for offline operation.
+MICROSOFT-VC-RUNTIME.txt contains the Microsoft runtime terms.
+
+Microsoft Edge WebView2 is the system web renderer used by Tauri. The setup
+package includes Microsoft's offline WebView2 Runtime installer so an existing
+system runtime is not required. Microsoft runtime terms apply to WebView2.
+
+The application license is in LICENSE. Original-MIT.txt preserves the prior application notice. These third-party notices and licenses take
+precedence for their respective components. The supplied PVA icon is user-
+provided artwork and is not represented as third-party open-source artwork.

@@ -1,2 +1,3 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Keep the distributed license and checksummed vendor assets byte-for-byte.
+LICENSE -text
+app/src-tauri/resources/** -text

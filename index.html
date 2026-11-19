@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Photo Viewer Advanced</title>
+  <style>
+    html{background:#18191b;color:#f3f3f5;font:14px 'Segoe UI',sans-serif}
+    body{margin:0}
+    #startup{min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;text-align:center;padding:32px;box-sizing:border-box}
+    #startup strong{font-size:22px;font-weight:600}
+    #startup-message{color:#a3a5ae;max-width:480px;line-height:1.6}
+  </style>
+</head>
+<body>
+  <div id="app"><div id="startup" role="status"><strong>Photo Viewer Advanced</strong><span id="startup-message">Starting photo viewer…</span></div></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
