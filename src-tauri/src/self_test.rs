@@ -29,7 +29,7 @@ fn run(folder: PathBuf) -> Result<Vec<Check>, String> {
     let folder = fs::canonicalize(folder).map_err(|e| e.to_string())?;
     let exe = std::env::current_exe().map_err(|e| e.to_string())?;
     let parent = exe.parent().unwrap();
-    let decoder_path = [parent.join("resources/imagemagick/magick.exe"), parent.join("imagemagick/magick.exe"), PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("resources/imagemagick/magick.exe")].into_iter().find(|p| p.exists()).ok_or("Decoder was not found")?;
+    let decoder_path = [parent.join("resources/imagemagick/magick.exe"), parent.join("imagemagick/magick.exe")].into_iter().find(|p| p.exists()).ok_or("Decoder was not found")?;
     let output = folder.join("test-output"); fs::create_dir_all(&output).map_err(|e| e.to_string())?;
     let decoder = Decoder::new(decoder_path, output.join("cache"))?;
     let mut checks = Vec::new();

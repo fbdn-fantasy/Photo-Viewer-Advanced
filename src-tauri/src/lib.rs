@@ -1,8 +1,13 @@
 mod animation;
 mod container;
+#[cfg_attr(target_os = "linux", path = "decoder_linux.rs")]
 mod decoder;
 mod settings;
+#[cfg_attr(target_os = "linux", path = "self_test_linux.rs")]
 mod self_test;
+mod updates;
+#[cfg(target_os = "linux")]
+mod linux_playback;
 
 use decoder::{Decoder, EXTENSIONS};
 use serde::Serialize;
@@ -15,6 +20,8 @@ use tokio::sync::Semaphore;
 
 struct AppState {
     decoder: Decoder,
+    #[cfg(target_os = "linux")]
+    playback: linux_playback::Playback,
     settings_file: PathBuf,
     jobs: Arc<Semaphore>, thumbnails: Arc<Semaphore>, generation: AtomicU64,
     current_open: Mutex<Option<Arc<AtomicBool>>>,
@@ -47,10 +54,23 @@ impl StartupLifecycle {
     }
 }
 
+#[cfg(windows)]
 fn decoder_executable(app: &tauri::AppHandle) -> Result<PathBuf, String> {
     let resource = app.path().resource_dir().map_err(|e| e.to_string())?;
-    let paths = [resource.join("resources/imagemagick/magick.exe"), resource.join("imagemagick/magick.exe"), PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("resources/imagemagick/magick.exe")];
+    let paths = [resource.join("resources/imagemagick/magick.exe"), resource.join("imagemagick/magick.exe")];
     paths.into_iter().find(|p| p.is_file()).ok_or("The bundled decoder is missing. Please reinstall the application.".into())
+}
+
+#[tauri::command]
+async fn animation_frame(app: tauri::AppHandle, state: tauri::State<'_, AppState>, path: String, format: String, index: u32) -> Result<tauri::ipc::Response, String> {
+    #[cfg(windows)] { let _ = (app,state,path,format,index); Err("Native animation frames are used on Linux.".into()) }
+    #[cfg(target_os = "linux")]
+    {
+    let path = decoder::source_path(&path)?;
+    if !app.asset_protocol_scope().is_allowed(&path) { return Err("Open the image before playing it.".into()); }
+    let playback = state.playback.clone();
+    tauri::async_runtime::spawn_blocking(move || linux_playback::read(&playback, path, &format, index)).await.map_err(|e| e.to_string())?
+    }
 }
 
 #[tauri::command]
@@ -103,7 +123,10 @@ fn cloak_window(window: &tauri::WebviewWindow, cloaked: bool) -> Result<(), Stri
 }
 
 fn restore_main_window(window: &tauri::WebviewWindow) {
-    let _ = window.restore_state(tauri_plugin_window_state::StateFlags::SIZE | tauri_plugin_window_state::StateFlags::POSITION | tauri_plugin_window_state::StateFlags::MAXIMIZED);
+    let saved = window.app_handle().path().app_config_dir().ok().map(|dir| dir.join(".window-state.json").is_file()).unwrap_or(false);
+    if saved {
+        let _ = window.restore_state(tauri_plugin_window_state::StateFlags::SIZE | tauri_plugin_window_state::StateFlags::POSITION | tauri_plugin_window_state::StateFlags::MAXIMIZED);
+    } else { let _ = window.maximize(); }
 }
 
 #[tauri::command]
@@ -150,7 +173,11 @@ async fn open_path(app: tauri::AppHandle, state: tauri::State<'_, AppState>, pat
     let _permit = state.jobs.clone().acquire_owned().await.map_err(|e| e.to_string())?;
     if state.generation.load(Ordering::SeqCst) != generation { return Err("Opening canceled because a newer image was selected.".into()); }
     let mut decoder = state.decoder.clone(); decoder.canceled = Some(canceled);
+    #[cfg(target_os = "linux")]
+    let playback = state.playback.clone();
     let info = tauri::async_runtime::spawn_blocking(move || {
+        #[cfg(target_os = "linux")]
+        playback.lock().map_err(|e| e.to_string())?.take();
         let selected = resolve_open_path(&path)?;
         decoder.open(&selected)
     }).await.map_err(|e| e.to_string())??;
@@ -259,6 +286,19 @@ fn set_default_viewer() -> Result<(), String> {
         let result = unsafe { ShellExecuteW(std::ptr::null_mut(), verb.as_ptr(), uri.as_ptr(), std::ptr::null(), std::ptr::null(), SW_SHOWNORMAL) };
         if (result as isize) <= 32 { return Err("Windows Default Apps settings could not be opened.".into()); }
     }
+    #[cfg(target_os = "linux")]
+    {
+    let entry = "com.photovieweradvanced.desktop";
+    let user_apps = std::env::var_os("XDG_DATA_HOME").map(PathBuf::from).or_else(|| std::env::var_os("HOME").map(|home| PathBuf::from(home).join(".local/share")));
+    let dirs = std::env::var_os("XDG_DATA_DIRS").unwrap_or_else(|| "/usr/local/share:/usr/share".into());
+    if !user_apps.into_iter().chain(std::env::split_paths(&dirs)).any(|dir| dir.join("applications").join(entry).is_file()) {
+        return Err("Install the desktop entry first. For the tar release, run install-user.sh.".into());
+    }
+    let status = std::process::Command::new("xdg-mime").args(["default", entry])
+        .args(include_str!("../../linux/mime-types.txt").split_whitespace())
+        .status().map_err(|e| format!("Could not run xdg-mime: {e}"))?;
+    if !status.success() { return Err("Could not register the desktop entry. Install the package or run install-user.sh from the tar archive.".into()); }
+    }
     Ok(())
 }
 
@@ -270,6 +310,12 @@ fn launch_path(args: impl IntoIterator<Item = String>, cwd: Option<&str>) -> Opt
 }
 
 pub fn run() {
+    #[cfg(target_os = "linux")]
+    {
+        gtk::glib::set_prgname(Some("com.photovieweradvanced"));
+        gtk::init().expect("Could not connect to the desktop display");
+        gtk::gdk::set_program_class("com.photovieweradvanced");
+    }
     tauri::Builder::default()
         .manage(StartupState(Mutex::new(StartupLifecycle::new(launch_path(std::env::args(), None)))))
         .plugin(tauri_plugin_single_instance::init(|app, args, cwd| {
@@ -293,6 +339,9 @@ pub fn run() {
                 let _ = window.restore_state(tauri_plugin_window_state::StateFlags::SIZE | tauri_plugin_window_state::StateFlags::POSITION);
             }
             let cache = app.path().app_cache_dir()?.join("images-v1");
+            #[cfg(target_os = "linux")]
+            let decoder = Decoder::new(cache)?;
+            #[cfg(windows)]
             let decoder = Decoder::new(decoder_executable(app.handle())?, cache)?;
             let jobs = Arc::new(Semaphore::new(1));
             let thumbnails = Arc::new(Semaphore::new(1));
@@ -306,7 +355,7 @@ pub fn run() {
                 cache_decoder.prune();
             });
             let settings_file = app.path().app_config_dir()?.join("settings.json");
-            app.manage(AppState { decoder, settings_file, jobs, thumbnails, generation: AtomicU64::new(0), current_open: Mutex::new(None) });
+            app.manage(AppState { decoder, #[cfg(target_os = "linux")] playback: Default::default(), settings_file, jobs, thumbnails, generation: AtomicU64::new(0), current_open: Mutex::new(None) });
             // A failed frontend must not strand an invisible app. The static
             // HTML shell remains available even if the module cannot start.
             let fallback_app = app.handle().clone();
@@ -327,7 +376,7 @@ pub fn run() {
             });
             Ok(())
         })
-        .invoke_handler(tauri::generate_handler![pick_path,pick_save_path,path_exists,frontend_ready,prepare_main_window,show_main_window,open_path,list_folder,thumbnail,save_image,load_settings,save_settings,clear_thumbnail_cache,set_default_viewer])
+        .invoke_handler(tauri::generate_handler![updates::check_for_update,animation_frame,pick_path,pick_save_path,path_exists,frontend_ready,prepare_main_window,show_main_window,open_path,list_folder,thumbnail,save_image,load_settings,save_settings,clear_thumbnail_cache,set_default_viewer])
         .run(tauri::generate_context!())
         .expect("Could not start Photo Viewer Advanced");
 }
@@ -343,8 +392,9 @@ mod tests {
         assert_eq!(names, ["image1.png", "image2.png", "image02.png", "image10.png"]);
     }
     #[test] fn unicode_launch_path_preserved() {
-        let args = vec!["viewer.exe".into(), r"C:\pictures\Café & 测试 [1].png".into()];
-        assert_eq!(launch_path(args, None).unwrap(), r"C:\pictures\Café & 测试 [1].png");
+        let path = std::env::temp_dir().join("Café & 测试 [1].png");
+        let value = decoder::path_string(&path);
+        assert_eq!(launch_path(vec!["viewer".into(), value.clone()], None), Some(value));
     }
     #[test] fn explorer_launches_before_listener_registration_keep_the_latest_path() {
         let mut startup = StartupLifecycle::new(Some("first.png".into()));

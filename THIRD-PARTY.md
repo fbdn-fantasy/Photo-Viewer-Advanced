@@ -1,6 +1,6 @@
 # Dependency and licensing information
 
-Photo Viewer Advanced 3.0.0 ships under the Apache License, Version 2.0. See `LICENSE` at the source root or `resources/licenses/LICENSE` in the installation. The prior application copyright and MIT notice are preserved in `resources/licenses/Original-MIT.txt` in the installation and under `app/src-tauri/` at the same relative path in source. The supplied PVA icon remains user-provided artwork under its existing rights.
+Photo Viewer Advanced V1.0.0 ships under the GNU Affero General Public License, version 3 only. See `LICENSE` at the source root or `resources/licenses/LICENSE` in the installation. The prior application copyright and MIT notice are preserved in `resources/licenses/Original-MIT.txt` in the installation and under `src-tauri/` at the same relative path in source. The supplied PVA icon remains user-provided artwork under its existing rights.
 
 The installer contains complete notices in `resources/licenses/`:
 
@@ -12,7 +12,9 @@ The installer contains complete notices in `resources/licenses/`:
 
 ImageMagick is developed by ImageMagick Studio LLC. Photo Viewer Advanced uses its unmodified executable as a separate process with a restrictive local policy. This does not imply ImageMagick endorsement. Important image libraries include LibRaw, libheif/libde265, libjxl, OpenJPEG, OpenEXR, libwebp, libpng, libjpeg-turbo, libtiff, librsvg and Little CMS. Each retains its own license.
 
-To rebuild or modify the bundled decoder, use `Photo-Viewer-Advanced-3.0.0-Source.zip`, the companion archive for the Windows installer. Inside that ZIP, `third-party-sources/README.md` gives the rebuild instructions. The same directory contains 49 pinned upstream archives, their SHA-256 manifest, Windows build configuration, and sources for the linked LGPL libraries and MPL Rust crates.
+To rebuild or modify the bundled decoder, use `Photo-Viewer-Advanced-V1.0.0-Windows-Source.zip`, the companion archive for the Windows installer. Inside that ZIP, `third-party-sources/README.md` gives the rebuild instructions. The same directory contains 49 pinned upstream archives, their SHA-256 manifest, Windows build configuration, and sources for the linked LGPL libraries and MPL Rust crates.
 
 Tauri and WebView2 are separate components. The Rust app and frontend assets are bundled in the executable. Microsoft Edge WebView2 is a system runtime; Microsoft's unmodified offline runtime installer is embedded in setup, and Microsoft's runtime terms apply. No source archive or neighboring workspace files are needed to run the installed app.
 
+
+The installed project license is accompanied by NOTICE. The earlier Apache license is preserved in Prior-Apache-2.0.txt. Linux packages include their Rust, ImageMagick and codec notices. Linux codec sources and rebuild inputs are in linux/vendor. The system package manager supplies GTK, WebKitGTK, curl and the other system runtime dependencies.

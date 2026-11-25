@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policymap>
+  <!-- Offline viewer: bounded built-in codecs, no shell delegates or remote resources. -->
+  <policy domain="resource" name="memory" value="256MiB"/>
+  <policy domain="resource" name="map" value="512MiB"/>
+  <policy domain="resource" name="disk" value="2GiB"/>
+  <policy domain="resource" name="area" value="32MP"/>
+  <policy domain="resource" name="width" value="100KP"/>
+  <policy domain="resource" name="height" value="100KP"/>
+  <policy domain="resource" name="list-length" value="10000"/>
+  <policy domain="resource" name="thread" value="2"/>
+  <policy domain="resource" name="time" value="120"/>
+  <policy domain="delegate" rights="none" pattern="*"/>
+  <policy domain="filter" rights="none" pattern="*"/>
+  <policy domain="coder" rights="none" pattern="{HTTP,HTTPS,FTP,URL,MSL,MVG,PS,PS2,PS3,EPS,EPS2,EPS3,PDF,XPS,TEXT,LABEL,CAPTION,INLINE,SHOW,WIN}"/>
+  <policy domain="path" rights="none" pattern="@*"/>
+  <policy domain="path" rights="none" pattern="|*"/>
+  <policy domain="path" rights="none" pattern="-"/>
+  <policy domain="system" name="svg" rights="none" pattern="substitute-entities"/>
+  <policy domain="system" name="max-profile-size" value="16MiB"/>
+  <policy domain="system" name="max-memory-request" value="256MiB"/>
+</policymap>

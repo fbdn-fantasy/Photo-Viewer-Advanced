@@ -1,4 +1,4 @@
-Photo Viewer Advanced 3.0.0 — third-party components
+Photo Viewer Advanced V1.0.0 — third-party components
 
 Image decoding is provided by unmodified ImageMagick 7.1.2-35 Q16-HDRI x64
 and its statically linked image libraries. ImageMagick-and-delegates-NOTICE.txt

@@ -1,0 +1,17 @@
+{
+  "mainBinaryName": "photo-viewer-advanced-V1.0.0",
+  "bundle": {
+    "targets": [
+      "deb",
+      "rpm"
+    ],
+    "resources": [
+      "resources/linux/*",
+      "resources/licenses/LICENSE",
+      "resources/licenses/NOTICE"
+    ]
+  },
+  "build": {
+    "frontendDist": "../dist-linux"
+  }
+}

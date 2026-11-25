@@ -1,0 +1,494 @@
+{
+  "date": "2026-11-09",
+  "source": "Exact repository commits identified in bundled ImageMagick 7.1.2-35 NOTICE.txt",
+  "sources": [
+    {
+      "name": "ImageMagick 7.1.2-35 (2026-10-31)",
+      "repository": "https://github.com/ImageMagick/ImageMagick",
+      "commit": "5d1bcc55f2c83bc2ff802118b7369756610f3ad4",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/ImageMagick/tar.gz/5d1bcc55f2c83bc2ff802118b7369756610f3ad4",
+      "filename": "ImageMagick-5d1bcc55f2c83bc2ff802118b7369756610f3ad4.tar.gz",
+      "sha256": "dfa138a2e55cd400789ec162209edf3675113b3ae95b7d4869495a606e614bbb",
+      "bytes": 14729957,
+      "status": "downloaded"
+    },
+    {
+      "name": "aom 3.15.2 (2026-10-09)",
+      "repository": "https://github.com/ImageMagick/aom",
+      "commit": "949b2083094619a8cf6491938d47e6c4804ed108",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/aom/tar.gz/949b2083094619a8cf6491938d47e6c4804ed108",
+      "filename": "aom-949b2083094619a8cf6491938d47e6c4804ed108.tar.gz",
+      "sha256": "0c4672ceab4ddec7143b6a71cabf3db1c99fa21412e3b8e2bb8ec0de917f35d8",
+      "bytes": 6672851,
+      "status": "downloaded"
+    },
+    {
+      "name": "brotli 1.2.1 (2026-10-21)",
+      "repository": "https://github.com/ImageMagick/brotli",
+      "commit": "62877063ab55b3494bdee9d1239156754aed6413",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/brotli/tar.gz/62877063ab55b3494bdee9d1239156754aed6413",
+      "filename": "brotli-62877063ab55b3494bdee9d1239156754aed6413.tar.gz",
+      "sha256": "2bccadb0d28374224ef8cc003f2b90a6646a56446fc25b5a4a0a246cae15ef1d",
+      "bytes": 647564,
+      "status": "downloaded"
+    },
+    {
+      "name": "libbzip2 1.0.8 (2019-07-13)",
+      "repository": "https://github.com/ImageMagick/bzip2",
+      "commit": "abffe764f875f71d051efb19d4c83139375f82d7",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/bzip2/tar.gz/abffe764f875f71d051efb19d4c83139375f82d7",
+      "filename": "bzip2-abffe764f875f71d051efb19d4c83139375f82d7.tar.gz",
+      "sha256": "0ec88bb7126677682271d3df7fd7e62cf14d875542e6d5631fcb374bf1c91610",
+      "bytes": 819392,
+      "status": "downloaded"
+    },
+    {
+      "name": "cairo 1.18.6 (2026-09-20)",
+      "repository": "https://github.com/ImageMagick/cairo",
+      "commit": "4334da83d8f44abe5aab1a11956e3f8e6e58eac7",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/cairo/tar.gz/4334da83d8f44abe5aab1a11956e3f8e6e58eac7",
+      "filename": "cairo-4334da83d8f44abe5aab1a11956e3f8e6e58eac7.tar.gz",
+      "sha256": "276b1e39fb456125839003feefb9b8ebcb4f63660cc3edde68f77e3a208b43f7",
+      "bytes": 47854479,
+      "status": "downloaded"
+    },
+    {
+      "name": "libcroco 0.6.13 (2019-04-06)",
+      "repository": "https://github.com/ImageMagick/croco",
+      "commit": "178785cdc6faecad555a4e6fe4fda2b625046e8e",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/croco/tar.gz/178785cdc6faecad555a4e6fe4fda2b625046e8e",
+      "filename": "croco-178785cdc6faecad555a4e6fe4fda2b625046e8e.tar.gz",
+      "sha256": "b51c0bbe1bca5445065ab9dd3bb139cbe53da23590abb30fbbfdb1882d7db83f",
+      "bytes": 226609,
+      "status": "downloaded"
+    },
+    {
+      "name": "libde265 1.1.3 (2026-09-14)",
+      "repository": "https://github.com/ImageMagick/de265",
+      "commit": "5a0bf9f624d810de6af20e41ac3cfd92bf7de508",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/de265/tar.gz/5a0bf9f624d810de6af20e41ac3cfd92bf7de508",
+      "filename": "de265-5a0bf9f624d810de6af20e41ac3cfd92bf7de508.tar.gz",
+      "sha256": "a6c6f0ba717bb2d317e44e055615f89cbe6a19102c49b7f1477076eaa97661ac",
+      "bytes": 326375,
+      "status": "downloaded"
+    },
+    {
+      "name": "openexr 3.5.2 (2026-10-03)",
+      "repository": "https://github.com/ImageMagick/exr",
+      "commit": "85a96b21d3cdcae99fbea6f32f62eba9ca4a9fdd",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/exr/tar.gz/85a96b21d3cdcae99fbea6f32f62eba9ca4a9fdd",
+      "filename": "exr-85a96b21d3cdcae99fbea6f32f62eba9ca4a9fdd.tar.gz",
+      "sha256": "2dd58e07fb6fedde14586310e301a252a4a3e7bba347176419d812683635706f",
+      "bytes": 25638435,
+      "status": "downloaded"
+    },
+    {
+      "name": "libffi 3.8.0 (2026-08-09)",
+      "repository": "https://github.com/ImageMagick/ffi",
+      "commit": "91982d4ac97b179dd1fb878caef2ed2847bc38b6",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/ffi/tar.gz/91982d4ac97b179dd1fb878caef2ed2847bc38b6",
+      "filename": "ffi-91982d4ac97b179dd1fb878caef2ed2847bc38b6.tar.gz",
+      "sha256": "2ab2dd0a7349810ff2f2513d274cc20447a00abbcf2c420c47368a3762c0407f",
+      "bytes": 1581996,
+      "status": "downloaded"
+    },
+    {
+      "name": "fontconfig 2.18.3 (2026-08-06)",
+      "repository": "https://github.com/ImageMagick/fontconfig",
+      "commit": "943048d94dfa3d7d4a213f36f9ef7af988397cd4",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/fontconfig/tar.gz/943048d94dfa3d7d4a213f36f9ef7af988397cd4",
+      "filename": "fontconfig-943048d94dfa3d7d4a213f36f9ef7af988397cd4.tar.gz",
+      "sha256": "9700f1d27aee3815208d3c632ba327ac1bdab739dd4219e122b3af98574d7c47",
+      "bytes": 666895,
+      "status": "downloaded"
+    },
+    {
+      "name": "freetype 2.15.0 (2026-10-11)",
+      "repository": "https://github.com/ImageMagick/freetype",
+      "commit": "c872866d7b45c6926d82a636c3f9055472e6c334",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/freetype/tar.gz/c872866d7b45c6926d82a636c3f9055472e6c334",
+      "filename": "freetype-c872866d7b45c6926d82a636c3f9055472e6c334.tar.gz",
+      "sha256": "381db9af008658d458bf22379757447e885f8b7f8ac68779df44a101933f948a",
+      "bytes": 4306221,
+      "status": "downloaded"
+    },
+    {
+      "name": "fribidi 1.0.18 (2026-10-29)",
+      "repository": "https://github.com/ImageMagick/fribidi",
+      "commit": "a51f6765d9bfafab1f7bd3f5f507ccf1eac6be6b",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/fribidi/tar.gz/a51f6765d9bfafab1f7bd3f5f507ccf1eac6be6b",
+      "filename": "fribidi-a51f6765d9bfafab1f7bd3f5f507ccf1eac6be6b.tar.gz",
+      "sha256": "a9fb5e6dd9ef4106ec80c68ebab7ad76dc349c2c4564890f7e8e42f26cbac848",
+      "bytes": 2733329,
+      "status": "downloaded"
+    },
+    {
+      "name": "gdk-pixbuf 2.44.8 (2026-08-12)",
+      "repository": "https://github.com/ImageMagick/gdk-pixbuf",
+      "commit": "92a234886a0337480770ef93dc74ea920bf39ab3",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/gdk-pixbuf/tar.gz/92a234886a0337480770ef93dc74ea920bf39ab3",
+      "filename": "gdk-pixbuf-92a234886a0337480770ef93dc74ea920bf39ab3.tar.gz",
+      "sha256": "048edde4fad3e6bfcea990832e31a66209caf562e2939b7dbb3bf55a9ef606d6",
+      "bytes": 6698819,
+      "status": "downloaded"
+    },
+    {
+      "name": "glib 2.64.3 (2020-05-20)",
+      "repository": "https://github.com/ImageMagick/glib",
+      "commit": "ea0118ca0d408473d320b21262a1cdc6ce3e5f40",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/glib/tar.gz/ea0118ca0d408473d320b21262a1cdc6ce3e5f40",
+      "filename": "glib-ea0118ca0d408473d320b21262a1cdc6ce3e5f40.tar.gz",
+      "sha256": "c797ca6e45da4df7fdf7b4da4889cc7484bca2448bf03c3c1c00fe5d38104fb3",
+      "bytes": 8322548,
+      "status": "downloaded"
+    },
+    {
+      "name": "harfbuzz 15.0.0 (2026-10-22)",
+      "repository": "https://github.com/ImageMagick/harfbuzz",
+      "commit": "c77409b255cbce3e39210681dfad9ba93eadbcbe",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/harfbuzz/tar.gz/c77409b255cbce3e39210681dfad9ba93eadbcbe",
+      "filename": "harfbuzz-c77409b255cbce3e39210681dfad9ba93eadbcbe.tar.gz",
+      "sha256": "beed6f6d0751764609dc87417de9013166d246f3440151379f0dc353e18e5f20",
+      "bytes": 39012554,
+      "status": "downloaded"
+    },
+    {
+      "name": "libheif 1.23.7 (2026-10-26)",
+      "repository": "https://github.com/ImageMagick/heif",
+      "commit": "498042a72e805c50e5e84b57e15327f3cfdf6a63",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/heif/tar.gz/498042a72e805c50e5e84b57e15327f3cfdf6a63",
+      "filename": "heif-498042a72e805c50e5e84b57e15327f3cfdf6a63.tar.gz",
+      "sha256": "3c4febbbe877b732c794a001c5966d1dd517af90d5330a54d14b16f8348170ef",
+      "bytes": 2372635,
+      "status": "downloaded"
+    },
+    {
+      "name": "libhwy 1.4.0 (2026-04-23)",
+      "repository": "https://github.com/ImageMagick/highway",
+      "commit": "e1a586af5be6358bb983ff608f9678a622209ca3",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/highway/tar.gz/e1a586af5be6358bb983ff608f9678a622209ca3",
+      "filename": "highway-e1a586af5be6358bb983ff608f9678a622209ca3.tar.gz",
+      "sha256": "bf5e3b614051a94c53b1bc0b9a91e9c4ccf138599b1a8a709c71f9a2fe23bcf2",
+      "bytes": 3687651,
+      "status": "downloaded"
+    },
+    {
+      "name": "imath 3.2.3 (2026-08-20)",
+      "repository": "https://github.com/ImageMagick/imath",
+      "commit": "1ec391453dd33f3432018d3a266e3d177a705235",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/imath/tar.gz/1ec391453dd33f3432018d3a266e3d177a705235",
+      "filename": "imath-1ec391453dd33f3432018d3a266e3d177a705235.tar.gz",
+      "sha256": "ec2edc11d8afd0c46f5ee47af3aeadff6a09247c3ebbbf3efa138658a6f80af0",
+      "bytes": 685382,
+      "status": "downloaded"
+    },
+    {
+      "name": "libjpeg-turbo 3.2.1 (2026-10-27)",
+      "repository": "https://github.com/ImageMagick/jpeg-turbo",
+      "commit": "ea2dd9d26a47da90c87a3ab57f6ac7f85977be83",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/jpeg-turbo/tar.gz/ea2dd9d26a47da90c87a3ab57f6ac7f85977be83",
+      "filename": "jpeg-turbo-ea2dd9d26a47da90c87a3ab57f6ac7f85977be83.tar.gz",
+      "sha256": "18b549b82a99d17721b1b5e11248af7693f357885d4c9a2fa8c1d9daa7925073",
+      "bytes": 2556350,
+      "status": "downloaded"
+    },
+    {
+      "name": "libjxl 0.12.0 (2026-07-01)",
+      "repository": "https://github.com/ImageMagick/jpeg-xl",
+      "commit": "8503118ff13ab8b11680296900da3361d6703dc1",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/jpeg-xl/tar.gz/8503118ff13ab8b11680296900da3361d6703dc1",
+      "filename": "jpeg-xl-8503118ff13ab8b11680296900da3361d6703dc1.tar.gz",
+      "sha256": "909ea42d073bd5878be2ec40360e97dc62518cff9eb40b75328ac41c1a0bde97",
+      "bytes": 1680269,
+      "status": "downloaded"
+    },
+    {
+      "name": "lcms 2.19.1 (2026-05-06)",
+      "repository": "https://github.com/ImageMagick/lcms",
+      "commit": "d261ab6fda30fd7578a2ce7ace5c0b2c7d3fc0b8",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/lcms/tar.gz/d261ab6fda30fd7578a2ce7ace5c0b2c7d3fc0b8",
+      "filename": "lcms-d261ab6fda30fd7578a2ce7ace5c0b2c7d3fc0b8.tar.gz",
+      "sha256": "fe6f8810de14efa5613216fd7b7bd2b1a52258301bd26a8c827711945405e3d4",
+      "bytes": 5731112,
+      "status": "downloaded"
+    },
+    {
+      "name": "liblqr 0.4.2 (2012-12-04)",
+      "repository": "https://github.com/ImageMagick/lqr",
+      "commit": "a2e9e8b5b41bf0569f51482707a12d354a086f3a",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/lqr/tar.gz/a2e9e8b5b41bf0569f51482707a12d354a086f3a",
+      "filename": "lqr-a2e9e8b5b41bf0569f51482707a12d354a086f3a.tar.gz",
+      "sha256": "a543255184370596adff8522e585df53d3f9088c0fc351073fc1c4b8a2df54d2",
+      "bytes": 550036,
+      "status": "downloaded"
+    },
+    {
+      "name": "liblzma 5.8.4 (2026-09-09)",
+      "repository": "https://github.com/ImageMagick/lzma",
+      "commit": "131e9a49425f51b8dd8710c57fbaa527baed3989",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/lzma/tar.gz/131e9a49425f51b8dd8710c57fbaa527baed3989",
+      "filename": "lzma-131e9a49425f51b8dd8710c57fbaa527baed3989.tar.gz",
+      "sha256": "8ccc6b3e09e2e927ff171b28fd3181fc2210cfebca96f33ae3155bcedbe8b3a4",
+      "bytes": 2981178,
+      "status": "downloaded"
+    },
+    {
+      "name": "openh264 2.7.0 (2026-10-22)",
+      "repository": "https://github.com/ImageMagick/openh264",
+      "commit": "8f7d29ca929a6b66682c0a5889a62a68c0cfa486",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/openh264/tar.gz/8f7d29ca929a6b66682c0a5889a62a68c0cfa486",
+      "filename": "openh264-8f7d29ca929a6b66682c0a5889a62a68c0cfa486.tar.gz",
+      "sha256": "3d045e367d7de85cc26bfc67be6a677c5fbb02a567cc84f512f07c2e07e2be98",
+      "bytes": 60327642,
+      "status": "downloaded"
+    },
+    {
+      "name": "openjpeg 2.5.4 (2025-09-20)",
+      "repository": "https://github.com/ImageMagick/openjpeg",
+      "commit": "97ce1d10749b1a02d657eae491e80c572ca183b2",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/openjpeg/tar.gz/97ce1d10749b1a02d657eae491e80c572ca183b2",
+      "filename": "openjpeg-97ce1d10749b1a02d657eae491e80c572ca183b2.tar.gz",
+      "sha256": "69d1cf92b58ee3315a3d3856032fdf54b0adad75889d8a4a7e1195099979bc78",
+      "bytes": 2159027,
+      "status": "downloaded"
+    },
+    {
+      "name": "openjph 0.32.0 (2026-09-17)",
+      "repository": "https://github.com/ImageMagick/openjph",
+      "commit": "c1a1ffc1e3f90eb9397407f1f545a47e01390aef",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/openjph/tar.gz/c1a1ffc1e3f90eb9397407f1f545a47e01390aef",
+      "filename": "openjph-c1a1ffc1e3f90eb9397407f1f545a47e01390aef.tar.gz",
+      "sha256": "2141784c9f10fb8b526e30ceedc5a5406c9037900241ba7579a60362dddfbf8f",
+      "bytes": 564275,
+      "status": "downloaded"
+    },
+    {
+      "name": "pango 1.45.3 (2020-06-22)",
+      "repository": "https://github.com/ImageMagick/pango",
+      "commit": "0b1e4536e0005f3c36b523c17ea12322490efd45",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/pango/tar.gz/0b1e4536e0005f3c36b523c17ea12322490efd45",
+      "filename": "pango-0b1e4536e0005f3c36b523c17ea12322490efd45.tar.gz",
+      "sha256": "6fa31ce353abd9999edfa23bd7502c98bb75f7f95faa22dfd809ac8ed27c162b",
+      "bytes": 713759,
+      "status": "downloaded"
+    },
+    {
+      "name": "pixman 0.46.4 (2025-07-20)",
+      "repository": "https://github.com/ImageMagick/pixman",
+      "commit": "f7b55a8d3c39380724da9fbdef72ad70be800efc",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/pixman/tar.gz/f7b55a8d3c39380724da9fbdef72ad70be800efc",
+      "filename": "pixman-f7b55a8d3c39380724da9fbdef72ad70be800efc.tar.gz",
+      "sha256": "ad78d8518bf56c031dfd7da5e30ed195282058c8e57fdbc014a572439a690387",
+      "bytes": 829769,
+      "status": "downloaded"
+    },
+    {
+      "name": "libpng 1.6.59 (2026-09-28)",
+      "repository": "https://github.com/ImageMagick/png",
+      "commit": "1ccb8b78643c7ad5360f00719a1e952ce0be7a53",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/png/tar.gz/1ccb8b78643c7ad5360f00719a1e952ce0be7a53",
+      "filename": "png-1ccb8b78643c7ad5360f00719a1e952ce0be7a53.tar.gz",
+      "sha256": "950c64e8bec363eace77b0940fbcf494d4379017599dda5a2bb325c05274ac5e",
+      "bytes": 1604004,
+      "status": "downloaded"
+    },
+    {
+      "name": "libraqm 0.11.0 (2026-07-23)",
+      "repository": "https://github.com/ImageMagick/raqm",
+      "commit": "a699b8b7838acb4ac8d5891f42ecf3d84a00a9ad",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/raqm/tar.gz/a699b8b7838acb4ac8d5891f42ecf3d84a00a9ad",
+      "filename": "raqm-a699b8b7838acb4ac8d5891f42ecf3d84a00a9ad.tar.gz",
+      "sha256": "3fd0b81d784d4506e0ef20faa840ad16c2374621368d7e62b295c2c9ffca21b8",
+      "bytes": 323016,
+      "status": "downloaded"
+    },
+    {
+      "name": "libraw 0.22.3 (2026-10-26)",
+      "repository": "https://github.com/ImageMagick/raw",
+      "commit": "71399d76efc3fa915bf3fb01ddede994b549a80a",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/raw/tar.gz/71399d76efc3fa915bf3fb01ddede994b549a80a",
+      "filename": "raw-71399d76efc3fa915bf3fb01ddede994b549a80a.tar.gz",
+      "sha256": "78244d0dfb43d46399763b89efe4b24483d85b43f3b79b83712e3322432c76b0",
+      "bytes": 613192,
+      "status": "downloaded"
+    },
+    {
+      "name": "librsvg 2.40.20 (2017-12-15)",
+      "repository": "https://github.com/ImageMagick/rsvg",
+      "commit": "7415a6765db7554ba6f0f1b3dcb0877f36ff581b",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/rsvg/tar.gz/7415a6765db7554ba6f0f1b3dcb0877f36ff581b",
+      "filename": "rsvg-7415a6765db7554ba6f0f1b3dcb0877f36ff581b.tar.gz",
+      "sha256": "dbfc4f2e50d1021c4eb8c946956a77cafb94ded6146a212cca042f4ee89fc0c1",
+      "bytes": 2169507,
+      "status": "downloaded"
+    },
+    {
+      "name": "libtiff 4.7.2 (2026-06-26)",
+      "repository": "https://github.com/ImageMagick/tiff",
+      "commit": "3021cd03440ba6954f8bdf2b7ad4557a36092cd8",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/tiff/tar.gz/3021cd03440ba6954f8bdf2b7ad4557a36092cd8",
+      "filename": "tiff-3021cd03440ba6954f8bdf2b7ad4557a36092cd8.tar.gz",
+      "sha256": "f6646956524fe69996a2e270e5b1bd115c7f290011841c8648fc15a509ee35ca",
+      "bytes": 2610697,
+      "status": "downloaded"
+    },
+    {
+      "name": "libwebp 1.6.0 (2025-07-09)",
+      "repository": "https://github.com/ImageMagick/webp",
+      "commit": "b981ef267195cb12f2cb97e4dd23e12a1323a4ce",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/webp/tar.gz/b981ef267195cb12f2cb97e4dd23e12a1323a4ce",
+      "filename": "webp-b981ef267195cb12f2cb97e4dd23e12a1323a4ce.tar.gz",
+      "sha256": "9e0901646ec502fb8a932163ac11e4718758c4dc206948eee5ed155b92d0f212",
+      "bytes": 3835879,
+      "status": "downloaded"
+    },
+    {
+      "name": "libxml2 2.15.4 (2026-09-01)",
+      "repository": "https://github.com/ImageMagick/xml",
+      "commit": "3ba73c8312b7ac88adc1a2e62df13d0827e93a0f",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/xml/tar.gz/3ba73c8312b7ac88adc1a2e62df13d0827e93a0f",
+      "filename": "xml-3ba73c8312b7ac88adc1a2e62df13d0827e93a0f.tar.gz",
+      "sha256": "a1a59f3e706f4dc717e1a6b0b47a310b2ece867557d934b1c932fd8737d6b592",
+      "bytes": 2972073,
+      "status": "downloaded"
+    },
+    {
+      "name": "libzip 1.12.1 (2026-10-14)",
+      "repository": "https://github.com/ImageMagick/zip",
+      "commit": "4fb2753af4c718080b62fbadda0e99fd9178ab6a",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/zip/tar.gz/4fb2753af4c718080b62fbadda0e99fd9178ab6a",
+      "filename": "zip-4fb2753af4c718080b62fbadda0e99fd9178ab6a.tar.gz",
+      "sha256": "bd98a170d8318ebf67b53ab6e4daddcbdaf619da56ddbf277db95646125a5bbe",
+      "bytes": 1321389,
+      "status": "downloaded"
+    },
+    {
+      "name": "zlib 1.3.2 (2026-02-17)",
+      "repository": "https://github.com/ImageMagick/zlib",
+      "commit": "e42706934e4e7564d960031ae62ff29d918ee06d",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/zlib/tar.gz/e42706934e4e7564d960031ae62ff29d918ee06d",
+      "filename": "zlib-e42706934e4e7564d960031ae62ff29d918ee06d.tar.gz",
+      "sha256": "f493dc331efae71a25499358a5b3a1967eb7ac3556b3a22befed5e268bb08802",
+      "bytes": 1562591,
+      "status": "downloaded"
+    },
+    {
+      "name": "zstd 1.5.7 (2025-02-19)",
+      "repository": "https://github.com/ImageMagick/zstd",
+      "commit": "4d5752ffeca8defb48ad744274f4f76b2866d71d",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/zstd/tar.gz/4d5752ffeca8defb48ad744274f4f76b2866d71d",
+      "filename": "zstd-4d5752ffeca8defb48ad744274f4f76b2866d71d.tar.gz",
+      "sha256": "0b30081ed1d96efc99b69dfd576ddaa25c66ca08fa1798a61af452646382c5af",
+      "bytes": 2442402,
+      "status": "downloaded"
+    },
+    {
+      "name": "ImageMagick Windows build scripts at release time",
+      "repository": "https://github.com/ImageMagick/Windows",
+      "commit": "00ddd4dfc905f970f1ab658d9a86afce9ea9d387",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/Windows/tar.gz/00ddd4dfc905f970f1ab658d9a86afce9ea9d387",
+      "filename": "Windows-00ddd4dfc905f970f1ab658d9a86afce9ea9d387.tar.gz",
+      "sha256": "159b07b381d5f8309ef0d579d12387ad0b92feaf632ea16a14a103975ed608e7",
+      "bytes": 2263,
+      "status": "downloaded"
+    },
+    {
+      "name": "ImageMagick Configure 2026.10.31.1239 (pinned by ImageMagick release scripts)",
+      "repository": "https://github.com/ImageMagick/Configure",
+      "commit": "cd4f71087861df15d781fb90b33556393825cf40",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/Configure/tar.gz/cd4f71087861df15d781fb90b33556393825cf40",
+      "filename": "Configure-cd4f71087861df15d781fb90b33556393825cf40.tar.gz",
+      "sha256": "352cd80d420e3b77d487bfc9acc8e6126a1663f32b85b97ff04f9a949c6ae3d7",
+      "bytes": 6716995,
+      "status": "downloaded"
+    },
+    {
+      "name": "ImageMagick Dependencies 2026.10.31.2057 (pinned by ImageMagick release scripts)",
+      "repository": "https://github.com/ImageMagick/Dependencies",
+      "commit": "8889f5cd9f0e0c1937a89350d95078d28a647a41",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/Dependencies/tar.gz/8889f5cd9f0e0c1937a89350d95078d28a647a41",
+      "filename": "Dependencies-8889f5cd9f0e0c1937a89350d95078d28a647a41.tar.gz",
+      "sha256": "66d37a8731642e28b13f448d8a27007ae2899f82894bd5aef02fe177298b95e4",
+      "bytes": 22936,
+      "status": "downloaded"
+    },
+    {
+      "name": "cssparser 0.37.0 (unmodified MPL-2.0 Rust crate)",
+      "repository": "https://github.com/servo/rust-cssparser",
+      "archiveUrl": "https://static.crates.io/crates/cssparser/cssparser-0.37.0.crate",
+      "filename": "cssparser-0.37.0.crate",
+      "sha256": "8c9cdaae01d5ed7882b04d795e7f752f46ff52d2fa3b50a20d28c464510bba98",
+      "bytes": 56860,
+      "status": "downloaded"
+    },
+    {
+      "name": "cssparser-macros 0.7.1 (unmodified MPL-2.0 Rust crate)",
+      "repository": "https://github.com/servo/rust-cssparser",
+      "archiveUrl": "https://static.crates.io/crates/cssparser-macros/cssparser-macros-0.7.1.crate",
+      "filename": "cssparser-macros-0.7.1.crate",
+      "sha256": "d045de693cb712d0b22c6a64be5b953f67b3ce00ab5ad3dd5d8b441886ab8e1a",
+      "bytes": 8197,
+      "status": "downloaded"
+    },
+    {
+      "name": "dtoa-short 0.3.5 (unmodified MPL-2.0 Rust crate)",
+      "repository": "https://github.com/upsuper/dtoa-short",
+      "archiveUrl": "https://static.crates.io/crates/dtoa-short/dtoa-short-0.3.5.crate",
+      "filename": "dtoa-short-0.3.5.crate",
+      "sha256": "cd1511a7b6a56299bd043a9c167a6d2bfb37bf84a6dfceaba651168adfb43c87",
+      "bytes": 8287,
+      "status": "downloaded"
+    },
+    {
+      "name": "option-ext 0.2.0 (unmodified MPL-2.0 Rust crate)",
+      "repository": "https://github.com/soc/option-ext.git",
+      "archiveUrl": "https://static.crates.io/crates/option-ext/option-ext-0.2.0.crate",
+      "filename": "option-ext-0.2.0.crate",
+      "sha256": "04744f49eae99ab78e0d5c0b603ab218f515ea8cfe5a456d7629ad883a3b6e7d",
+      "bytes": 7345,
+      "status": "downloaded"
+    },
+    {
+      "name": "selectors 0.38.0 (unmodified MPL-2.0 Rust crate)",
+      "repository": "https://github.com/servo/stylo",
+      "archiveUrl": "https://static.crates.io/crates/selectors/selectors-0.38.0.crate",
+      "filename": "selectors-0.38.0.crate",
+      "sha256": "8adfa1c298912827b8a28b223b3b874357397ae706e6190acd9bf28cee99114d",
+      "bytes": 69601,
+      "status": "downloaded"
+    },
+    {
+      "name": "libjpeg-turbo 12-bit build variant",
+      "repository": "https://github.com/ImageMagick/jpeg-turbo-12",
+      "commit": "e4c325c9f2ea22198174c14cfaec6982249f819d",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/jpeg-turbo-12/tar.gz/e4c325c9f2ea22198174c14cfaec6982249f819d",
+      "filename": "jpeg-turbo-12-e4c325c9f2ea22198174c14cfaec6982249f819d.tar.gz",
+      "sha256": "afdec58dcb5d6ad40457a927044aa19e4a7955288cec13f45ca40aa4cf51c19c",
+      "role": null,
+      "bytes": 829,
+      "status": "downloaded"
+    },
+    {
+      "name": "libjpeg-turbo 16-bit build variant",
+      "repository": "https://github.com/ImageMagick/jpeg-turbo-16",
+      "commit": "1048733eff5403a3a3610155b457ec54a548a1af",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/jpeg-turbo-16/tar.gz/1048733eff5403a3a3610155b457ec54a548a1af",
+      "filename": "jpeg-turbo-16-1048733eff5403a3a3610155b457ec54a548a1af.tar.gz",
+      "sha256": "a352ae7fdfe1cc71c094b8dfd2f0dc18f3cdf0b5e711f2452d610dfbe74e31fb",
+      "role": null,
+      "bytes": 879,
+      "status": "downloaded"
+    },
+    {
+      "name": "ImageMagick Configure 2026.10.29.1902 (dependency build tool)",
+      "repository": "https://github.com/ImageMagick/Configure",
+      "commit": "d3772cc2878efd62e7caddf47c0d7081d05d2abe",
+      "archiveUrl": "https://codeload.github.com/ImageMagick/Configure/tar.gz/d3772cc2878efd62e7caddf47c0d7081d05d2abe",
+      "filename": "Configure-d3772cc2878efd62e7caddf47c0d7081d05d2abe.tar.gz",
+      "sha256": "0f7c4b99563c3cc9521adbe61f85226c016744ff303e1c018d2474174cfd00e1",
+      "role": "dependency-configure",
+      "bytes": 6716904,
+      "status": "downloaded"
+    }
+  ]
+}

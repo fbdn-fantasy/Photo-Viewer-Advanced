@@ -15,6 +15,7 @@ Beyond viewing images, it includes basic editing tools, image conversion, folder
 - **Slideshows:** Browse images automatically with adjustable intervals.
 - **Customization:** Adjust appearance, zoom behavior, and animation settings.
 - **Offline Operation:** No accounts, cloud services, or internet connection required for normal use.
+- **Check for Updates:** Use the toolbar button to download and install the latest release from GitHub.
 
 ## Supported Formats
 
@@ -42,7 +43,7 @@ Download the latest version from the **Releases** section.
 
 ## License
 
-Photo Viewer Advanced is open-source software licensed under the [Apache License 2.0](LICENSE).
+Photo Viewer Advanced is open-source software licensed under the [GNU Affero General Public License, version 3 only](LICENSE). See the [project notice](NOTICE).
 
 See [THIRD-PARTY.md](THIRD-PARTY.md) for third-party licenses and notices.
 

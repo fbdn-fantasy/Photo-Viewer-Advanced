@@ -1,0 +1,1 @@
+The synthetic image fixtures are CC0. The libavif and libheif upstream fixtures carry the accompanying license files in tests/fixtures. The fixture files are included in the source archive for testing.

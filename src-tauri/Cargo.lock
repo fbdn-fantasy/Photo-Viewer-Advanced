@@ -2418,11 +2418,14 @@ dependencies = [
 
 [[package]]
 name = "photo-viewer-advanced"
-version = "3.0.0"
+version = "1.0.0"
 dependencies = [
+ "gtk",
  "roxmltree",
+ "semver",
  "serde",
  "serde_json",
+ "sha2",
  "tauri",
  "tauri-build",
  "tauri-plugin-dialog",

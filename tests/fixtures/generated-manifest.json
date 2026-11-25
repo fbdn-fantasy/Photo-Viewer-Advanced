@@ -1,0 +1,24 @@
+{
+  "generated": "2026-11-09T19:29:02.348Z",
+  "license": "CC0-1.0: synthetic test images created for this project",
+  "timingDisposal": {
+    "frames": 3,
+    "durationMs": [
+      70,
+      130,
+      290
+    ],
+    "gifTotalPlays": 2,
+    "apngTotalPlays": 2,
+    "apngDispose": [
+      "none",
+      "previous",
+      "background"
+    ],
+    "apngBlend": [
+      "source",
+      "over",
+      "over"
+    ]
+  }
+}
